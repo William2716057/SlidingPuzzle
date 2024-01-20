@@ -113,3 +113,23 @@ function swap(clicked) {
         }
     }
 }
+//check for win function
+
+function checkHasWon() {
+    // loop though each tile
+    for (let i = 1; i <= numberOfTiles; i++) {
+        //get current tile element by ID
+        currentTile = document.getElementById(`btn${i}`);
+        //get attribute of current tile
+        currentTileIndex = currentTile.getAttribute('index');
+        //get displayed number on the current tile 
+        currentTileValue = currentTile.innerHTML;
+        //game will not be won if position and value do not match 
+        if (parseInt(currentTileIndex) != parseInt(currentTileValue)) {
+            return false;
+        }
+    }
+    //when all tile positions match displayed value return as true
+    return true;
+}
+
