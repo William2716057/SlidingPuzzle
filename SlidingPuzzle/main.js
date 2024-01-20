@@ -141,6 +141,7 @@ function setSelected(index) {
     currentTileText = currentTile.innerHTML;
     //remove selected class from highlighted tile
     currentTile.classList.remove('selected');
+    //get selected element
     newTile = document.getElementById(`btn${index}`);
     currentTile.innerHTML = newTile.innerHTML;
     newTile.innerHTML = currentTileText;
