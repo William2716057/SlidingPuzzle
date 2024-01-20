@@ -27,19 +27,27 @@ function newGame() {
 //Buttons
 
 function loadTiles(n) {
+    //loop through every tile of the puzzle
     for (let i = 1; i <= numberOfTiles; i++) {
+        //create new button elements
         var newTile = document.createElement('button');
+        //assign an ID based on the tile number
         newTile.id = `btn${i}`;
+        //set attribute indexes to store each tiles position
         newTile.setAttribute('index', i);
+        //set inner HTML of the button to the tile number
         newTile.innerHTML = i;
+        //add btn class to the button for styling
         newTile.classList.add('btn');
+        //click event listener for tile swapping
         newTile.addEventListener('click', function () {
             swap(parseInt(this.getAttribute('index')));
-    });
+        });
+    //append new tile button to container
     buttonContainer.append(newTile);
     }
     selectedTileId = 'btn' + highlighted;
     selectedTile = document.getElementById(selectedTileId);
     selectedTile.classList.add("selected");
 }
-
+//shuffle function 
