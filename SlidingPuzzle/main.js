@@ -7,4 +7,3 @@ let highlighted = numberOfTiles;
 let shuffled = false;
 
 let buttonContainer = document.getElementById('tiles');
-
