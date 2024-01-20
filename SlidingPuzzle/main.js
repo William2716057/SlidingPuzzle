@@ -143,8 +143,11 @@ function setSelected(index) {
     currentTile.classList.remove('selected');
     //get selected element
     newTile = document.getElementById(`btn${index}`);
+    //set displayed value of tile to original tile
     currentTile.innerHTML = newTile.innerHTML;
     newTile.innerHTML = currentTileText;
+    //add selected class to new selected tile
     newTile.classList.add("selected");
+    //update to new selected tile index
     highlighted = index;
 }
