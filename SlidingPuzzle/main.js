@@ -13,3 +13,15 @@ let buttonContainer = document.getElementById('tiles');
 //initialise new game
 newGame();
 
+//loading and shuffling function
+
+function newGame() {
+    //load the tiles using defined size
+    loadTiles(size)
+    //shuffle the tiles after a delay
+    setTimeout(() => {
+        shuffle();
+    }, 500);
+}
+
+
