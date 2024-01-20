@@ -81,3 +81,35 @@ function shuffle() {
     }
 }
 
+// Swap tiles
+
+function swap(clicked) {
+    if (clicked < 1 || clicked > (numberOfTiles)) {
+        return;
+    }
+
+
+    // Check if we are trying to swap right
+    if (clicked == highlighted + 1) {
+        if (clicked % size != 1) {
+            setSelected(clicked);
+        }
+        //check if swapping left
+    } else if (clicked == highlighted - 1) {
+        if (clicked % size != 0) {
+            setSelected(clicked);
+        }
+        //use size when swapping up or down
+    } else if (clicked == highlighted + size) {
+        setSelected(clicked);
+        // Check if we are trying to swap down 
+    } else if (clicked == highlighted - size) {
+        setSelected(clicked);
+    }
+    //check for win condition 
+    if (shuffled) {
+        if (checkHasWon()) {
+            alert("Winner!")
+        }
+    }
+}
