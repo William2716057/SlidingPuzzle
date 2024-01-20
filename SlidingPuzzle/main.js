@@ -1,7 +1,7 @@
-// JavaScript source code
 
+//defining number of tiles
 let size = 4
-//let size = 4;
+//calculate the number of tiles
 let numberOfTiles = size ** 2;
 let highlighted = numberOfTiles;
 let shuffled = false;
