@@ -7,7 +7,6 @@ to be displayed in a web browser
 
 ![Screenshot 2024-01-20 154939](https://github.com/William2716057/SlidingPuzzle/assets/77903649/2250c466-eb24-45f0-a67d-26d15e582889)
 
-![win](https://github.com/William2716057/SlidingPuzzle/assets/77903649/82ce63ee-efcd-4ec7-bc65-b5badc442d64)
 
 ![Screenshot 2024-01-20 154040](https://github.com/William2716057/SlidingPuzzle/assets/77903649/e0fca33e-e82e-4634-afd9-045732051d1b)
 
