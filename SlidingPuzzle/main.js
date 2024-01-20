@@ -51,3 +51,33 @@ function loadTiles(n) {
     selectedTile.classList.add("selected");
 }
 //shuffle function 
+
+function shuffle() {
+    let minShuffles = 100;
+    let totalShuffles = minShuffles + Math.floor(Math.random() * (200 - 100) + 100);
+
+    for (let i = minShuffles; i <= totalShuffles; i++) {
+        setTimeout(function timer() {
+            let x = Math.floor(Math.random() * 4);
+            //initialise the direction variable to 0
+            let direction = 0;
+            //determine the direction based on random numbers
+            if (x == 0) {
+                direction = highlighted + 1;
+            } else if (x == 1) {
+                direction = highlighted - 1;
+            } else if (x == 2) {
+                direction = highlighted + size;
+            } else if (x == 3) {
+                direction = highlighted - size;
+            }
+            //perform the swap based on the directions determined above
+            swap(direction);
+            //shuffled will equal true when it matches total shuffles
+            if (i >= totalShuffles - 1) {
+                shuffled = true;
+            }
+        }, i * 10);
+    }
+}
+
