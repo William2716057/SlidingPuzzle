@@ -24,4 +24,22 @@ function newGame() {
     }, 500);
 }
 
+//Buttons
+
+function loadTiles(n) {
+    for (let i = 1; i <= numberOfTiles; i++) {
+        var newTile = document.createElement('button');
+        newTile.id = `btn${i}`;
+        newTile.setAttribute('index', i);
+        newTile.innerHTML = i;
+        newTile.classList.add('btn');
+        newTile.addEventListener('click', function () {
+            swap(parseInt(this.getAttribute('index')));
+    });
+    buttonContainer.append(newTile);
+    }
+    selectedTileId = 'btn' + highlighted;
+    selectedTile = document.getElementById(selectedTileId);
+    selectedTile.classList.add("selected");
+}
 
