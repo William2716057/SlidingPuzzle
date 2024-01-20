@@ -133,3 +133,17 @@ function checkHasWon() {
     return true;
 }
 
+// Applies stylings to the selected tile
+function setSelected(index) {
+    //get highlighted tile element
+    currentTile = document.getElementById(`btn${highlighted}`);
+    //get displayed value on highlighted tile
+    currentTileText = currentTile.innerHTML;
+    //remove selected class from highlighted tile
+    currentTile.classList.remove('selected');
+    newTile = document.getElementById(`btn${index}`);
+    currentTile.innerHTML = newTile.innerHTML;
+    newTile.innerHTML = currentTileText;
+    newTile.classList.add("selected");
+    highlighted = index;
+}
